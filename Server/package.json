@@ -2,9 +2,10 @@
   "name": "null",
   "version": "2.3.3",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon --exec npm run babel-node --watch ./ -- index.js",
-    "babel-node": "babel-node"
+    "start": "node --harmony-async-await app",
+    "dev": "nodemon --exec npm run babel-node --watch ./ -- app.js",
+    "babel-node": "babel-node",
+    "build":"babel index.js -o app.js"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
@@ -12,7 +13,6 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "koa": "next",
     "shortid": "^2.2.6",
     "socket.io": "^1.7.3"
   }

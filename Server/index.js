@@ -1,9 +1,7 @@
-import Koa from "koa"
 import socketio from "socket.io"
 import shortid from "shortid"
 
 let players = new Map()
-// const app = new Koa()
 const io = socketio(process.env.PORT || 3000)
 
 io.on('connect', socket => {

@@ -49,6 +49,7 @@ public class Network : MonoBehaviour {
         players.Add(e.data["id"].str, player);
 
         Debug.Log("players count: " + players.Count);
+
     }
 
     void OnMove (SocketIOEvent e)
@@ -87,7 +88,7 @@ public class Network : MonoBehaviour {
     {
         Debug.Log("player disconnected: " + e.data);
 
-        var id = e.data["id"].ToString();
+        var id = e.data["id"].str;
 
         var player = players[id];
 
