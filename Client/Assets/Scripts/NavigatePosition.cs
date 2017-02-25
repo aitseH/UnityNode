@@ -7,12 +7,16 @@ public class NavigatePosition : MonoBehaviour {
 
     NavMeshAgent agent;
 
-	void Start () {
+	void Awake () {
         agent = GetComponent<NavMeshAgent>();
 	}
+
+    void Update ()
+    {
+        GetComponent<Animator>().SetFloat("Distance", agent.remainingDistance);
+    }
 	
-	// Update is called once per frame
-	void Update () {
-        agent.SetDestination(Vector3.zero);
+    public void NavigateTo (Vector3 position) {
+        agent.SetDestination(position);
 	}
 }

@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "koa": "next",
+    "shortid": "^2.2.6",
     "socket.io": "^1.7.3"
   }
 }
